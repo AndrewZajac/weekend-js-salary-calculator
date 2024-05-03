@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javaScript.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Salary Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Salary Calculator</h1>
+    </header>
+
+    <main>
+        <section>
+            <h3>Add Employee</h3>
+            <form onsubmit = "onSubmit(event)" id="form">
+                <input id="firstName" required
+                    placeholder="First Name"
+                    type="text">
+                <input id="lastName" required
+                    placeholder="Last Name"
+                    type="text">
+                <input id="id" required
+                    placeholder="ID"
+                    type="text">
+                <input id="Title" required
+                    placeholder="Title"
+                    type="text">
+                <input id="annualSalary" required
+                    placeholder="Annual Salary"
+                    type="text">
+                <span id="submitButton">
+                <button>Submit</button>
+                </span>
+                
+            </form>
+        </section>
+
+        <section>
+            <h3>Employees</h3>
+            <table>
+                <thead>
+                    <tr id="tr">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <h5>Money Count</h5>
+    </footer>
+</body>
+</html>
