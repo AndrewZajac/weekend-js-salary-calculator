@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="javaScript.js"></script>
+    <script src="javaScript.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Salary Calculator</title>
 </head>
@@ -20,22 +20,20 @@
             <form onsubmit = "onSubmit(event)" id="form">
                 <input id="firstName" required
                     placeholder="First Name"
-                    type="text">
+                    type="text" value="Andrew"/>
                 <input id="lastName" required
                     placeholder="Last Name"
-                    type="text">
+                    type="text" value="Z"/>
                 <input id="id" required
                     placeholder="ID"
-                    type="text">
-                <input id="Title" required
+                    type="text" value="1"/>
+                <input id="title" required
                     placeholder="Title"
-                    type="text">
+                    type="text" value="CNA"/>
                 <input id="annualSalary" required
                     placeholder="Annual Salary"
-                    type="text">
-                <span id="submitButton">
+                    type="text" value="0"/>
                 <button>Submit</button>
-                </span>
                 
             </form>
         </section>
@@ -61,7 +59,7 @@
     </main>
 
     <footer>
-        <h5>Money Count</h5>
+        <h5 id="remaining">Money Count</h5>
     </footer>
 </body>
 </html>
