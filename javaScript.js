@@ -29,6 +29,9 @@ function onSubmit(event){
     const paraElement = document.getElementById('remaining');
     console.log(paraElement);
     total += Number(annualSalary) / 12;
+    if(total > 20000){
+        paraElement.style.color = "red";
+    }
     console.log('what is the total', total);
     // paraElement.innerText = total;
     paraElement.innerText = `$${total} Monthly Total`;

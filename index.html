@@ -10,56 +10,76 @@
 </head>
 
 <body>
-    <header>
-        <h1>Salary Calculator</h1>
-    </header>
+        <header>
+            <h1>Salary Calculator</h1>
 
-    <main>
-        <section>
-            <h3>Add Employee</h3>
-            <form onsubmit = "onSubmit(event)" id="form">
-                <input id="firstName" required
-                    placeholder="First Name"
-                    type="text" value="Andrew"/>
-                <input id="lastName" required
-                    placeholder="Last Name"
-                    type="text" value="Z"/>
-                <input id="id" required
-                    placeholder="ID"
-                    type="text" value="1"/>
-                <input id="title" required
-                    placeholder="Title"
-                    type="text" value="CNA"/>
-                <input id="annualSalary" required
-                    placeholder="Annual Salary"
-                    type="text" value="0"/>
-                <button>Submit</button>
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+          
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+          
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
+          
+            </div>
+    
+        </header>
+    
+
+        <main>
+            <section>
+                <h3>Add Employee</h3>
+                <form onsubmit = "onSubmit(event)" id="form">
+                    <input id="firstName" required
+                        placeholder="First Name"
+                        type="text" value=""/>
+                    <input id="lastName" required
+                        placeholder="Last Name"
+                        type="text" value=""/>
+                    <input id="id" required
+                        placeholder="ID"
+                        type="text" value=""/>
+                    <input id="title" required
+                        placeholder="Title"
+                        type="text" value=""/>
+                    <input id="annualSalary" required
+                        placeholder="Annual Salary"
+                        type="text" value="0"/>
+                    <button>Submit</button>
                 
-            </form>
-        </section>
+                </form>
+            </section>
 
-        <section>
-            <h3>Employees</h3>
-            <table>
-                <thead>
-                    <tr id="tr">
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Annual Salary</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
+            <section>
+                <h3>Employees</h3>
+                <table>
+                    <thead>
+                        <tr id="tr">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Annual Salary</th>
+                            <th></th>
+                            </tr>
+                    </thead>
+                    <tbody id="tbody">
 
-                </tbody>
-            </table>
-        </section>
-    </main>
+                    </tbody>
+                </table>
+            </section>
+        </main>
 
-    <footer>
-        <h5 id="remaining">Money Count</h5>
-    </footer>
+        <footer>
+            <h5 id="remaining">Money Count</h5>
+        </footer>
 </body>
 </html>
