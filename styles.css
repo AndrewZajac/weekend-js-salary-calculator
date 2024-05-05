@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
+
+
 body {
-    background-color: #dcdcdc;
+    /* background-color: #dcdcdc; */
     font-family: 'Roboto', sans-serif;
     color: #313131;
     font-size: 1.25em;
@@ -17,6 +20,7 @@ body {
     z-index: 1;
     position: relative;
     overflow: hidden;
+    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +34,7 @@ body {
   }
   header {
     height: 8em;
-    background-color: #7a7a7a;
+    /* background-color: #7a7a7a; */
     text-align: center;
   }
   main {
@@ -40,8 +44,9 @@ body {
   }
   footer {
     height: 8em;
-    background-color: #7a7a7a;
+    /* background-color: #7a7a7a; */
     text-align: center;
+    color: #c56914;
   }
   
   
@@ -67,7 +72,7 @@ body {
   input {
     padding: .5em;
     width: 150px;
-    background: #FCFCFC;
+    /* background: #FCFCFC; */
     border: 1px solid;
   }
   button {
@@ -90,24 +95,24 @@ body {
   }
   thead {
     background: #7a7a7a;
-    color: #fcfcfc;
+    color: #c56914;
   }
   tbody tr:nth-child(odd){ 
+    /* color: white; */
     background: #fcfcfc;
   }
   tbody tr:nth-child(even){
-    background: #dcdcdc;
+    /* color: black; */
+    background: #7a7a7a;
   }
 
   /* Start animated birds */
-  
-  @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
 
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
 h1 {
   font-family: 'Arima Madurai', cursive;
@@ -119,23 +124,25 @@ h1 {
   z-index: 3;
 }
 
-/* .container {
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* min-height: 100vh; */
-  /* min-height: 35rem;
-  background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%), url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
-  background-blend-mode: soft-light;
-  background-size: cover;
-  background-position: center center;
-  padding: 2rem;
-}  */
+/* Start gangnam style */
+h4 {width: 225px; height: 400px;
+  background-image: url(https://estelle.github.io/10/files/sprite.png);
+  animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite alternate 44ms;
+  animation-direction: normal, alternate;
+  /* display: flex; */
+}
+@keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@keyframes movearound {
+  0% {transform: translatex(0)}
+  100% {transform: translatex(600px);}
+}
+/* / gangnam style */
 
-.bird {
+/* .bird {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
   background-size: auto 100%;
   width: 88px;
@@ -166,14 +173,15 @@ h1 {
     animation-delay: -0.5s;
   }
 
-}
+} */
 
-.bird-container {
+/* .bird-container {
   position: absolute;
   top: 20%;
   left: -10%;
   transform: scale(0) translateX(-10vw);
   will-change: transform;
+  overflow: auto;
   
   animation-name: fly-right-one;
   animation-timing-function: linear;
@@ -199,9 +207,9 @@ h1 {
     animation-delay: 10.25s;
   }
   
-}
+} */
 
-@keyframes fly-cycle {
+/* @keyframes fly-cycle {
   
   100% {
     background-position: -900px 0;
@@ -279,5 +287,6 @@ h1 {
     transform: translateY(0vh) translateX(110vw) scale(0.45);
   }
   
-}
+} */
 /* /animated birds */
+
