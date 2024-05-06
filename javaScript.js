@@ -1,4 +1,9 @@
 
+const USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+});
 
 let total = 0;
 
@@ -16,7 +21,7 @@ function onReady(){
 
 function onSubmit(event){
     event.preventDefault();
-    const element = event.target;
+    // const element = event.target;
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const id = document.getElementById('id').value;
@@ -41,8 +46,8 @@ function onSubmit(event){
     <td>${lastName}</td>
     <td>${id}</td>
     <td>${title}</td>
-    <td>${annualSalary}</td>
-    <td><button id="removeButton" onclick="removeButton(event)">❌</button></td>
+    <td>${USDollar.format(annualSalary)}</td>
+    <td><button data-salary="${annualSalary}" id="removeButton" onclick="removeButton(event)">❌</button></td>
     </tr>
     `
 
@@ -50,10 +55,17 @@ function onSubmit(event){
 }
 
 function removeButton(event){
+    const consent = confirm("Are you sure you want to delete this employee?");
+    if(!consent) return;
     const element = event.target;
     element.closest('tr').remove();
-    console.log('ncndfjfj');
+
+    const thisSalary = Number(element.dataset.annualSalary);
+    total -= thisSalary;
+    console.log('Removed Button');
 }
+
+
 
 // function moneyCalculator(){
     
@@ -76,3 +88,5 @@ function removeButton(event){
 //     // console.log(sum);
 //     // return sum;
 // }
+
+function deleteEmployee(event){}
